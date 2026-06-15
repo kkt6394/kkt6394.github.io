@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>던전 픽셀 서바이버 (Dungeon Pixel Survivor)</title>
+  <meta name="description" content="끝없이 몰려오는 적을 자동 공격으로 쓸어담는 픽셀 던전 서바이버. App Store에서 만나보세요." />
+  <!-- 오픈그래프 (링크 공유 시 미리보기) -->
+  <meta property="og:title" content="던전 픽셀 서바이버" />
+  <meta property="og:description" content="끝없이 몰려오는 적을 쓸어담는 픽셀 던전 서바이버." />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #0d0b1a;
+      --bg2: #16122b;
+      --panel: #1d1838;
+      --accent: #ffcb3d;   /* 황금색 (보물/코인 느낌) */
+      --accent2: #7c5cff;  /* 보라 (마법) */
+      --text: #e8e6f0;
+      --muted: #9a93b8;
+      --border: #2e2752;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Noto Sans KR', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      /* 픽셀 격자 배경 */
+      background-image:
+        linear-gradient(rgba(124, 92, 255, 0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(124, 92, 255, 0.04) 1px, transparent 1px);
+      background-size: 32px 32px;
+    }
+    .wrap { max-width: 880px; margin: 0 auto; padding: 0 20px; }
+
+    /* 히어로 */
+    header {
+      text-align: center;
+      padding: 72px 20px 56px;
+      background: radial-gradient(circle at 50% 0%, var(--bg2), var(--bg) 70%);
+      border-bottom: 2px solid var(--border);
+    }
+    .badge {
+      display: inline-block;
+      font-family: 'Press Start 2P', cursive;
+      font-size: 10px;
+      color: var(--accent);
+      border: 2px solid var(--accent);
+      border-radius: 6px;
+      padding: 7px 12px;
+      margin-bottom: 26px;
+      letter-spacing: 1px;
+    }
+    h1 {
+      font-family: 'Press Start 2P', cursive;
+      font-size: clamp(20px, 5vw, 34px);
+      line-height: 1.5;
+      color: #fff;
+      text-shadow: 3px 3px 0 var(--accent2);
+      margin-bottom: 8px;
+    }
+    .subtitle {
+      font-family: 'Press Start 2P', cursive;
+      font-size: 11px;
+      color: var(--muted);
+      margin-bottom: 26px;
+    }
+    .tagline {
+      font-size: 17px;
+      color: var(--text);
+      max-width: 540px;
+      margin: 0 auto 36px;
+    }
+
+    /* 다운로드 버튼 */
+    .cta { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      font-weight: 700;
+      font-size: 15px;
+      padding: 14px 24px;
+      border-radius: 12px;
+      text-decoration: none;
+      border: 2px solid transparent;
+      transition: transform .12s ease, box-shadow .12s ease;
+    }
+    .btn:hover { transform: translateY(-3px); }
+    .btn-store {
+      background: var(--accent);
+      color: #1a1320;
+      box-shadow: 0 4px 0 #c79a1f;
+    }
+    .btn-store:hover { box-shadow: 0 7px 0 #c79a1f; }
+    .btn-soon {
+      background: transparent;
+      color: var(--muted);
+      border-color: var(--border);
+      cursor: default;
+    }
+    .btn-soon:hover { transform: none; }
+
+    /* 특징 섹션 */
+    section { padding: 56px 0; }
+    .section-title {
+      font-family: 'Press Start 2P', cursive;
+      font-size: 15px;
+      color: var(--accent);
+      text-align: center;
+      margin-bottom: 38px;
+    }
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 18px;
+    }
+    .card {
+      background: var(--panel);
+      border: 2px solid var(--border);
+      border-radius: 14px;
+      padding: 24px 20px;
+    }
+    .card .icon { font-size: 30px; margin-bottom: 12px; }
+    .card h3 {
+      font-size: 16px;
+      margin-bottom: 8px;
+      color: #fff;
+    }
+    .card p { font-size: 14px; color: var(--muted); }
+
+    /* 푸터 */
+    footer {
+      border-top: 2px solid var(--border);
+      padding: 40px 20px;
+      text-align: center;
+      color: var(--muted);
+      font-size: 14px;
+    }
+    footer a { color: var(--accent2); text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+    .footer-links { margin-bottom: 14px; }
+    .footer-links a { margin: 0 10px; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <span class="badge">PIXEL ROGUELITE</span>
+      <h1>던전 픽셀 서바이버</h1>
+      <p class="subtitle">DUNGEON PIXEL SURVIVOR</p>
+      <p class="tagline">
+        끝없이 몰려오는 던전의 적들을 자동 공격으로 쓸어담아라.<br />
+        무기를 강화하고, 더 깊은 층으로 살아남아 내려가는 픽셀 서바이버.
+      </p>
+      <div class="cta">
+        <a class="btn btn-store" href="https://apps.apple.com/us/app/dungeon-pixel-survivor/id6775445797" target="_blank" rel="noopener">
+           App Store에서 다운로드
+        </a>
+        <span class="btn btn-soon">🤖 Google Play 출시 예정</span>
+      </div>
+    </div>
+  </header>
+
+  <section>
+    <div class="wrap">
+      <h2 class="section-title">GAME FEATURES</h2>
+      <div class="features">
+        <div class="card">
+          <div class="icon">⚔️</div>
+          <h3>자동 전투</h3>
+          <p>이동에만 집중하세요. 무기는 알아서 적을 노립니다. 한 손으로 즐기는 서바이버.</p>
+        </div>
+        <div class="card">
+          <div class="icon">🔥</div>
+          <h3>무기 강화</h3>
+          <p>레벨업마다 능력을 골라 빌드를 완성하고, 화면을 가득 메운 적을 정리하세요.</p>
+        </div>
+        <div class="card">
+          <div class="icon">🏰</div>
+          <h3>점점 깊은 던전</h3>
+          <p>스테이지가 깊어질수록 강해지는 적과 보스. 얼마나 오래 살아남을 수 있나요?</p>
+        </div>
+        <div class="card">
+          <div class="icon">🎮</div>
+          <h3>가볍고 쾌적</h3>
+          <p>픽셀 그래픽과 짧은 플레이 루프로 언제 어디서나 부담 없이 즐기는 게임.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-links">
+      <a href="https://apps.apple.com/us/app/dungeon-pixel-survivor/id6775445797" target="_blank" rel="noopener">App Store</a>
+      <a href="mailto:kkt6394@gmail.com">문의하기</a>
+    </div>
+    <p>© 2026 KITAE KIM · 던전 픽셀 서바이버</p>
+  </footer>
+</body>
+</html>
