@@ -1,0 +1,10 @@
+{
+  "ios": {
+    "minVersion": "1.10.0",
+    "storeUrl": "https://apps.apple.com/app/id6775445797"
+  },
+  "android": {
+    "minVersion": "1.10.0",
+    "storeUrl": "https://play.google.com/store/apps/details?id=com.aiden.dungeonpixelsurvivor"
+  }
+}
