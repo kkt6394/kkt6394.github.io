@@ -3,204 +3,157 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>던전 픽셀 서바이버 (Dungeon Pixel Survivor)</title>
-  <meta name="description" content="끝없이 몰려오는 적을 자동 공격으로 쓸어담는 픽셀 던전 서바이버. App Store에서 만나보세요." />
+  <title>Aiden Studio</title>
+  <meta name="description" content="Aiden Studio는 작고 단단한 앱을 만드는 1인 개발 스튜디오입니다. Whistle PRO, 던전 픽셀 서바이버." />
   <!-- 오픈그래프 (링크 공유 시 미리보기) -->
-  <meta property="og:title" content="던전 픽셀 서바이버" />
-  <meta property="og:description" content="끝없이 몰려오는 적을 쓸어담는 픽셀 던전 서바이버." />
+  <meta property="og:title" content="Aiden Studio" />
+  <meta property="og:description" content="작고 단단한 앱을 만드는 1인 개발 스튜디오" />
   <meta property="og:type" content="website" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700;900&display=swap" rel="stylesheet" />
   <style>
     :root {
-      --bg: #0d0b1a;
-      --bg2: #16122b;
-      --panel: #1d1838;
-      --accent: #ffcb3d;   /* 황금색 (보물/코인 느낌) */
-      --accent2: #7c5cff;  /* 보라 (마법) */
-      --text: #e8e6f0;
-      --muted: #9a93b8;
-      --border: #2e2752;
+      --bg: #fafaf8;
+      --panel: #ffffff;
+      --text: #17181a;
+      --muted: #62666d;
+      --border: #e4e5e2;
+      --accent: #1f5eff;
     }
     * { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; }
     body {
-      font-family: 'Noto Sans KR', sans-serif;
+      font-family: -apple-system, "Noto Sans KR", "Segoe UI", Roboto, sans-serif;
       background: var(--bg);
       color: var(--text);
       line-height: 1.7;
-      /* 픽셀 격자 배경 */
-      background-image:
-        linear-gradient(rgba(124, 92, 255, 0.04) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(124, 92, 255, 0.04) 1px, transparent 1px);
-      background-size: 32px 32px;
     }
     .wrap { max-width: 880px; margin: 0 auto; padding: 0 20px; }
+    a { color: inherit; }
 
-    /* 히어로 */
-    header {
-      text-align: center;
-      padding: 72px 20px 56px;
-      background: radial-gradient(circle at 50% 0%, var(--bg2), var(--bg) 70%);
-      border-bottom: 2px solid var(--border);
-    }
-    .badge {
-      display: inline-block;
-      font-family: 'Press Start 2P', cursive;
-      font-size: 10px;
+    header { padding: 96px 0 56px; }
+    .eyebrow {
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 2px;
       color: var(--accent);
-      border: 2px solid var(--accent);
-      border-radius: 6px;
-      padding: 7px 12px;
-      margin-bottom: 26px;
-      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 14px;
     }
     h1 {
-      font-family: 'Press Start 2P', cursive;
-      font-size: clamp(20px, 5vw, 34px);
-      line-height: 1.5;
-      color: #fff;
-      text-shadow: 3px 3px 0 var(--accent2);
-      margin-bottom: 8px;
+      font-size: clamp(36px, 8vw, 60px);
+      font-weight: 900;
+      letter-spacing: -1px;
+      line-height: 1.1;
+      margin-bottom: 18px;
     }
-    .subtitle {
-      font-family: 'Press Start 2P', cursive;
-      font-size: 11px;
-      color: var(--muted);
-      margin-bottom: 26px;
-    }
-    .tagline {
-      font-size: 17px;
-      color: var(--text);
-      max-width: 540px;
-      margin: 0 auto 36px;
-    }
+    .intro { font-size: clamp(16px, 2.6vw, 19px); color: var(--muted); max-width: 560px; }
 
-    /* 다운로드 버튼 */
-    .cta { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 9px;
-      font-weight: 700;
-      font-size: 15px;
-      padding: 14px 24px;
-      border-radius: 12px;
+    section { padding: 24px 0 72px; }
+    h2 { font-size: 15px; font-weight: 700; color: var(--muted); margin-bottom: 18px; }
+    .apps { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 16px; }
+    .app {
+      display: flex;
+      gap: 18px;
+      align-items: flex-start;
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 22px;
       text-decoration: none;
-      border: 2px solid transparent;
       transition: transform .12s ease, box-shadow .12s ease;
     }
-    .btn:hover { transform: translateY(-3px); }
-    .btn-store {
-      background: var(--accent);
-      color: #1a1320;
-      box-shadow: 0 4px 0 #c79a1f;
-    }
-    .btn-store:hover { box-shadow: 0 7px 0 #c79a1f; }
-    .btn-soon {
-      background: transparent;
+    .app:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06); }
+    .app img { width: 72px; height: 72px; border-radius: 17px; flex-shrink: 0; }
+    .app h3 { font-size: 18px; font-weight: 900; line-height: 1.3; }
+    .app p { font-size: 14.5px; color: var(--muted); margin: 4px 0 10px; }
+    .tag {
+      display: inline-block;
+      font-size: 12px;
+      font-weight: 700;
+      padding: 3px 10px;
+      border-radius: 999px;
+      background: #eef1f6;
       color: var(--muted);
-      border-color: var(--border);
-      cursor: default;
     }
-    .btn-soon:hover { transform: none; }
+    .tag.live { background: #e7f6ec; color: #11713a; }
 
-    /* 특징 섹션 */
-    section { padding: 56px 0; }
-    .section-title {
-      font-family: 'Press Start 2P', cursive;
-      font-size: 15px;
-      color: var(--accent);
-      text-align: center;
-      margin-bottom: 38px;
-    }
-    .features {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 18px;
-    }
-    .card {
+    .contact {
       background: var(--panel);
-      border: 2px solid var(--border);
-      border-radius: 14px;
-      padding: 24px 20px;
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 24px;
     }
-    .card .icon { font-size: 30px; margin-bottom: 12px; }
-    .card h3 {
-      font-size: 16px;
-      margin-bottom: 8px;
-      color: #fff;
-    }
-    .card p { font-size: 14px; color: var(--muted); }
+    .contact dl { display: grid; grid-template-columns: max-content 1fr; gap: 6px 20px; font-size: 15px; }
+    .contact dt { color: var(--muted); }
+    .contact a { color: var(--accent); text-decoration: none; font-weight: 700; }
 
-    /* 푸터 */
     footer {
-      border-top: 2px solid var(--border);
-      padding: 40px 20px;
-      text-align: center;
+      border-top: 1px solid var(--border);
+      padding: 32px 0 44px;
       color: var(--muted);
-      font-size: 14px;
+      font-size: 13.5px;
     }
-    footer a { color: var(--accent2); text-decoration: none; }
+    footer a { text-decoration: none; margin-right: 16px; }
     footer a:hover { text-decoration: underline; }
-    .footer-links { margin-bottom: 14px; }
-    .footer-links a { margin: 0 10px; }
+    footer p { margin-top: 10px; }
   </style>
 </head>
 <body>
   <header>
     <div class="wrap">
-      <span class="badge">PIXEL ROGUELITE</span>
-      <h1>던전 픽셀 서바이버</h1>
-      <p class="subtitle">DUNGEON PIXEL SURVIVOR</p>
-      <p class="tagline">
-        끝없이 몰려오는 던전의 적들을 자동 공격으로 쓸어담아라.<br />
-        무기를 강화하고, 더 깊은 층으로 살아남아 내려가는 픽셀 서바이버.
+      <p class="eyebrow">Aiden Studio</p>
+      <h1>작고 단단한 앱을<br />만듭니다.</h1>
+      <p class="intro">
+        Aiden Studio는 iOS·Apple Watch·Android 앱을 만드는 1인 개발 스튜디오입니다.
+        필요한 일을 군더더기 없이 해내는 앱을 만들고, 사용자의 데이터는 가능한 한 기기 안에 둡니다.
       </p>
-      <div class="cta">
-        <a class="btn btn-store" href="https://apps.apple.com/us/app/dungeon-pixel-survivor/id6775445797" target="_blank" rel="noopener">
-           App Store에서 다운로드
-        </a>
-        <span class="btn btn-soon">🤖 Google Play 출시 예정</span>
-      </div>
     </div>
   </header>
 
   <section>
     <div class="wrap">
-      <h2 class="section-title">GAME FEATURES</h2>
-      <div class="features">
-        <div class="card">
-          <div class="icon">⚔️</div>
-          <h3>자동 전투</h3>
-          <p>이동에만 집중하세요. 무기는 알아서 적을 노립니다. 한 손으로 즐기는 서바이버.</p>
-        </div>
-        <div class="card">
-          <div class="icon">🔥</div>
-          <h3>무기 강화</h3>
-          <p>레벨업마다 능력을 골라 빌드를 완성하고, 화면을 가득 메운 적을 정리하세요.</p>
-        </div>
-        <div class="card">
-          <div class="icon">🏰</div>
-          <h3>점점 깊은 던전</h3>
-          <p>스테이지가 깊어질수록 강해지는 적과 보스. 얼마나 오래 살아남을 수 있나요?</p>
-        </div>
-        <div class="card">
-          <div class="icon">🎮</div>
-          <h3>가볍고 쾌적</h3>
-          <p>픽셀 그래픽과 짧은 플레이 루프로 언제 어디서나 부담 없이 즐기는 게임.</p>
-        </div>
+      <h2>앱 · Apps</h2>
+      <div class="apps">
+        <a class="app" href="whistle-pro/">
+          <img src="whistle-pro/icon.png" alt="Whistle PRO 아이콘" />
+          <div>
+            <h3>Whistle PRO</h3>
+            <p>아마추어 축구 심판을 위한 Apple Watch 경기 타이머와 기록</p>
+            <span class="tag">출시 예정</span>
+          </div>
+        </a>
+        <a class="app" href="survivor/">
+          <img src="survivor/icon.jpg" alt="던전 픽셀 서바이버 아이콘" />
+          <div>
+            <h3>던전 픽셀 서바이버</h3>
+            <p>끝없이 몰려오는 적을 자동 공격으로 쓸어담는 픽셀 던전 서바이버</p>
+            <span class="tag live">App Store</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <h2>문의 · Contact</h2>
+      <div class="contact">
+        <dl>
+          <dt>상호</dt><dd>Aiden Studio</dd>
+          <dt>대표</dt><dd>Kitae Kim</dd>
+          <dt>이메일</dt><dd><a href="mailto:kkt6394@gmail.com">kkt6394@gmail.com</a></dd>
+        </dl>
       </div>
     </div>
   </section>
 
   <footer>
-    <div class="footer-links">
-      <a href="https://apps.apple.com/us/app/dungeon-pixel-survivor/id6775445797" target="_blank" rel="noopener">App Store</a>
-      <a href="mailto:kkt6394@gmail.com">문의하기</a>
+    <div class="wrap">
+      <a href="whistle-pro/privacy.html">Whistle PRO 개인정보처리방침</a>
+      <a href="privacy-policy-ko.html">던전 픽셀 서바이버 개인정보처리방침</a>
+      <p>© 2026 Aiden Studio</p>
     </div>
-    <p>© 2026 KITAE KIM · 던전 픽셀 서바이버</p>
   </footer>
 </body>
 </html>
