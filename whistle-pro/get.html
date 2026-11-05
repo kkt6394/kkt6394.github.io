@@ -30,8 +30,11 @@
   .btn small { font-weight: 500; opacity: .7; font-size: .78rem; display: block; line-height: 1.1; }
   .btn span { text-align: left; }
   .btn svg { width: 26px; height: 26px; fill: #000; flex: none; }
-  .soon { display: flex; align-items: center; justify-content: center; gap: 10px; margin-top: 12px; padding: 13px 16px; border-radius: 14px;
-          background: var(--charcoal); color: var(--grey); font-size: .95rem; }
+  .stores { display: flex; flex-direction: column; gap: 12px; }
+  #ios { order: 1; } #android { order: 2; }
+  .android-first #android { order: 1; } .android-first #ios { order: 2; }
+  .soon { display: flex; align-items: center; justify-content: center; gap: 10px; padding: 13px 16px; border-radius: 14px;
+          background: var(--charcoal); color: var(--grey); font-size: .95rem; margin-top: 0; }
   .soon svg { width: 20px; height: 20px; fill: var(--grey); flex: none; }
   .feat { list-style: none; margin: 26px 0 0; padding: 0; text-align: left; background: var(--charcoal); border-radius: 16px; }
   .feat li { padding: 12px 16px; border-bottom: 1px solid var(--graphite); font-size: .95rem; }
@@ -49,6 +52,7 @@
 <h1>Whistle PRO</h1>
 <p class="tag" data-t="tag">Soccer referee watch timer</p>
 
+<div class="stores" id="stores">
 <a class="btn" id="ios" href="https://apps.apple.com/app/id6823503970?ct=web">
   <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16.4 12.6c0-2.5 2-3.7 2.1-3.8-1.2-1.7-3-1.9-3.6-2-1.5-.2-3 .9-3.8.9-.8 0-2-.9-3.3-.8-1.7 0-3.2 1-4.1 2.5-1.8 3.1-.5 7.6 1.3 10.1.9 1.2 1.9 2.6 3.2 2.5 1.3-.1 1.8-.8 3.3-.8s2 .8 3.3.8c1.4 0 2.3-1.2 3.1-2.5 1-1.4 1.4-2.8 1.4-2.9 0 0-2.7-1-2.9-4zM13.9 5.2c.7-.8 1.2-2 1-3.2-1 0-2.2.7-2.9 1.5-.6.7-1.2 1.9-1 3 1.1.1 2.2-.5 2.9-1.3z"/></svg>
   <span><small data-t="dl">Download on the</small>App Store</span>
@@ -57,6 +61,7 @@
 <div class="soon" id="android">
   <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3.6 1.8c-.3.3-.5.8-.5 1.4v17.6c0 .6.2 1.1.5 1.4l.1.1 9.9-9.9v-.2L3.7 1.7l-.1.1zm13.2 13.4-3.3-3.3v-.2l3.3-3.3.1.1 3.9 2.2c1.1.6 1.1 1.7 0 2.3l-3.9 2.2h-.1zM16 15.4 12.6 12 3.6 21c.4.4 1 .4 1.7 0L16 15.4zM16 8.6 5.3 2.5c-.7-.4-1.3-.3-1.7.1l9 9L16 8.6z"/></svg>
   <span data-t="soon">Google Play · Wear OS coming soon</span>
+</div>
 </div>
 
 <ul class="feat">
@@ -104,13 +109,13 @@
           note: "Cronómetro gratis · PRO: 7 días de prueba gratis", privacy: "Privacidad", terms: "Términos", support: "Soporte", doc: "-es" },
     th: { tag: "นาฬิกาจับเวลาผู้ตัดสินฟุตบอล", dl: "ดาวน์โหลดบน", soon: "Google Play · Wear OS เร็วๆ นี้",
           f1: "<b>แตะครั้งเดียว</b>เริ่มเกม · ทดเวลานับแยก", f2: "บันทึกประตู ใบเหลือง ใบแดง เปลี่ยนตัวบนนาฬิกา", f3: "รายงานการแข่งขัน PDF ฮีตแมป และวิดีโอรีเพลย์",
-          note: "ตัวจับเวลาใช้ฟรี · PRO ทดลองใช้ฟรี 7 วัน", privacy: "ความเป็นส่วนตัว", terms: "ข้อกำหนด", support: "ช่วยเหลือ" },
+          note: "ตัวจับเวลาใช้ฟรี · PRO ทดลองใช้ฟรี 7 วัน", privacy: "ความเป็นส่วนตัว", terms: "ข้อกำหนด", support: "ช่วยเหลือ", doc: "-th" },
     vi: { tag: "Đồng hồ bấm giờ cho trọng tài", dl: "Tải về trên", soon: "Google Play · Wear OS sắp ra mắt",
           f1: "<b>Một chạm</b> để giao bóng · bù giờ tính riêng", f2: "Ghi bàn thắng, thẻ, thay người ngay trên đồng hồ", f3: "Biên bản PDF, bản đồ nhiệt và video phát lại",
-          note: "Bấm giờ miễn phí · PRO dùng thử miễn phí 7 ngày", privacy: "Quyền riêng tư", terms: "Điều khoản", support: "Hỗ trợ" },
+          note: "Bấm giờ miễn phí · PRO dùng thử miễn phí 7 ngày", privacy: "Quyền riêng tư", terms: "Điều khoản", support: "Hỗ trợ", doc: "-vi" },
     id: { tag: "Timer untuk wasit sepak bola", dl: "Unduh di", soon: "Google Play · Wear OS segera hadir",
           f1: "<b>Sekali ketuk</b> untuk kick-off · tambahan waktu dihitung terpisah", f2: "Catat gol, kartu, dan pergantian di jam tangan", f3: "Laporan laga PDF, peta panas, dan video replay",
-          note: "Timer gratis · PRO: uji coba gratis 7 hari", privacy: "Privasi", terms: "Ketentuan", support: "Dukungan" }
+          note: "Timer gratis · PRO: uji coba gratis 7 hari", privacy: "Privasi", terms: "Ketentuan", support: "Dukungan", doc: "-id" }
   };
 
   function pick(code) {
@@ -126,7 +131,7 @@
     document.documentElement.lang = lang;
     var nodes = document.querySelectorAll("[data-t]");
     for (var i = 0; i < nodes.length; i++) nodes[i].innerHTML = t[nodes[i].getAttribute("data-t")];
-    // 처리방침·약관은 있는 언어만(ko는 기본 파일, th·vi·id는 영어로).
+    // 처리방침·약관: ko는 기본 파일(접미사 없음), 영어는 -en.
     var doc = t.doc !== undefined ? t.doc : "-en";
     document.getElementById("privacy").href = "privacy" + doc + ".html";
     document.getElementById("terms").href = "terms" + doc + ".html";
@@ -145,6 +150,8 @@
   var raw = params.get("src") || "";
   var src = /^[a-z]{1,8}$/.test(raw) ? raw : "web";
   document.getElementById("ios").href = "https://apps.apple.com/app/id6823503970?ct=" + src;
+  // 안드로이드로 열면 Google Play 줄을 위로(공개 전엔 "곧 출시" 줄 그대로).
+  if (/Android/i.test(navigator.userAgent)) document.getElementById("stores").className += " android-first";
   // Play 공개되면 되살린다:
   // document.getElementById("android").href = "https://play.google.com/store/apps/details?id=com.aidenstudio.whistlepro&referrer=" + encodeURIComponent("utm_source=" + src + "&utm_medium=social&utm_campaign=launch");
 })();
