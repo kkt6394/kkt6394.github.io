@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Whistle PRO — 아마추어 축구 심판을 위한 워치 타이머</title>
-  <meta name="description" content="워치만 차고 경기를 운영하세요. 경기 타이머, 추가시간, 이벤트 기록, 경기 보고서까지. 아마추어 축구 심판을 위한 Whistle PRO." />
+  <title>Whistle PRO — Watch timer for amateur soccer referees</title>
+  <meta name="description" content="Run the match with just your watch: match timer, added time, event logging and match reports. Whistle PRO, for amateur soccer referees." />
   <!-- 오픈그래프 (링크 공유 시 미리보기) -->
   <meta property="og:title" content="Whistle PRO" />
   <meta property="og:description" content="아마추어 축구 심판을 위한 워치 타이머" />
@@ -33,7 +33,7 @@
     * { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; background: var(--bg); }
     body { word-break: keep-all; overflow-wrap: break-word;
-      font-family: -apple-system, "Noto Sans KR", "Segoe UI", Roboto, sans-serif;
+      font-family: -apple-system, "Segoe UI", Roboto, "Noto Sans KR", "Noto Sans Thai", sans-serif;
       background: var(--bg); color: var(--text); line-height: 1.7; }
     .wrap { max-width: 920px; margin: 0 auto; padding: 0 20px; }
 
@@ -75,82 +75,78 @@
     .chip.y { background: var(--yellow); }
     .chip.r { background: var(--red); }
 
-    .en p { max-width: 680px; margin: 0 auto 12px; color: var(--muted); text-align: center; }
-    .en a { color: var(--lime) !important; }
-
     footer { border-top: 1px solid var(--chip); padding: 36px 20px 44px; text-align: center; color: var(--muted); font-size: 14px; }
     footer a { color: #d1d1d6; text-decoration: none; font-weight: 700; }
     footer a:hover { text-decoration: underline; }
     .footer-links { margin-bottom: 12px; }
     .footer-links a { margin: 0 10px; }
+    .lang { margin: 0 0 14px; appearance: none; -webkit-appearance: none; background: var(--bg); color: var(--muted);
+      border: 1px solid var(--chip); border-radius: 99px; padding: 5px 14px; font: inherit; font-size: 13px; text-align: center; }
   </style>
 </head>
 <body>
   <header>
     <div class="wrap">
-      <img class="app-icon" src="icon.png" alt="Whistle PRO 앱 아이콘" />
+      <img class="app-icon" src="icon.png" alt="Whistle PRO app icon" data-i-alt="iconAlt" />
       <h1>Whistle <em>PRO</em></h1>
-      <p class="tagline">
-        워치만 차고 경기장에 나가세요.<br />
-        아마추어 축구 심판을 위한 Apple Watch·Wear OS 경기 타이머와 기록.
-      </p>
+      <p class="tagline" data-i="tag">Just wear your watch and walk onto the pitch.<br />A match timer and notebook for Apple Watch and Wear OS, made for amateur soccer referees.</p>
       <div class="cta">
-        <a class="btn btn-primary" href="https://apps.apple.com/app/id6823503970?ct=web"> App Store에서 받기</a>
-        <span class="btn">Google Play 곧 출시</span>
+        <a class="btn btn-primary" href="https://apps.apple.com/app/id6823503970?ct=web" data-i="ios">Download on the App Store</a>
+        <span class="btn" data-i="soon">Google Play coming soon</span>
       </div>
-      <img class="hero" src="og-ko.png" alt="Apple Watch와 Wear OS 워치의 Whistle PRO 경기 화면" />
+      <img class="hero" id="hero" src="og-en.png" alt="Whistle PRO match screens on Apple Watch and a Wear OS watch" data-i-alt="heroAlt" />
     </div>
   </header>
 
   <section>
     <div class="wrap">
-      <h2 class="section-title">경기 중엔 워치, 경기 후엔 휴대폰</h2>
-      <p class="section-sub">조기축구, 동호회, 유소년 리그까지. 폰 없이 워치 하나로 경기 전체가 돌아갑니다.</p>
+      <h2 class="section-title" data-i="s1t">Watch during the match, phone after it</h2>
+      <p class="section-sub" data-i="s1s">Sunday leagues, clubs, youth leagues. The whole match runs on one watch — no phone needed.</p>
       <div class="features">
         <div class="card">
           <div class="icon">⏱️</div>
-          <h3>경기 타이머와 추가시간</h3>
-          <p>전·후반, 쿼터제, 연장전, 승부차기까지. 중단 시간을 따로 재서 권장 추가시간을 보여줍니다.</p>
+          <h3 data-i="c1h">Match timer and added time</h3>
+          <p data-i="c1p">Halves, quarters, extra time and penalties. Stoppages are timed separately to suggest added time.</p>
         </div>
         <div class="card">
           <div class="icon">📳</div>
-          <h3>진동 알림</h3>
-          <p>종료 직전, 하프타임 종료, 일시 퇴장 복귀 시점을 손목 진동으로 알려줍니다.</p>
+          <h3 data-i="c2h">Vibration alerts</h3>
+          <p data-i="c2p">Your wrist buzzes just before the end, when half-time is over and when a sin-binned player can return.</p>
         </div>
         <div class="card">
           <div class="icon">⚽</div>
-          <h3>네 번 탭으로 기록</h3>
-          <p>골, <span class="chip y"></span>경고, <span class="chip r"></span>퇴장, 교체를 팀·등번호와 함께 기록합니다. 경고 2회는 자동으로 퇴장 처리합니다.</p>
+          <h3 data-i="c3h">Log in four taps</h3>
+          <p data-i="c3p">Record goals, <span class="chip y"></span>cautions, <span class="chip r"></span>sendings-off and substitutions with team and shirt number. A second caution becomes a sending-off automatically.</p>
         </div>
         <div class="card">
           <div class="icon">📋</div>
-          <h3>우리 리그 규칙대로</h3>
-          <p>FIFA 표준을 기본으로, 경기 시간·인원·교체 한도·일시 퇴장까지 바꿔 프리셋으로 저장하세요.</p>
+          <h3 data-i="c4h">Your league, your rules</h3>
+          <p data-i="c4p">Start from the FIFA standard, change match length, players, substitution limits and sin bins, and save it as a preset.</p>
         </div>
         <div class="card">
           <div class="icon">❤️</div>
-          <h3>운동 데이터</h3>
-          <p>심박수, 이동 거리, 스프린트, 이동 히트맵을 경기 기록과 함께 남기고 건강 앱(iPhone)이나 Health Connect(Android)에 운동으로 저장합니다.</p>
+          <h3 data-i="c5h">Workout data</h3>
+          <p data-i="c5p">Heart rate, distance, sprints and a movement heatmap are kept with the match record and saved as a workout to the Health app (iPhone) or Health Connect (Android).</p>
         </div>
         <div class="card">
           <div class="icon">📤</div>
-          <h3>경기 보고서</h3>
-          <p>경기가 끝나면 휴대폰에서 득점·카드·교체와 적용 규칙이 정리된 보고서를 바로 공유할 수 있습니다.</p>
+          <h3 data-i="c6h">Match report</h3>
+          <p data-i="c6p">When the match is over, share a report from your phone with goals, cards, substitutions and the rules applied.</p>
         </div>
         <div class="card">
           <div class="icon">🛰️</div>
-          <h3>경기장 맞추기</h3>
-          <p>경기 상세 [지도] 탭에서 경기장 네 모서리를 맞추면 위성 사진 위에 내 이동 히트맵이 보입니다.</p>
+          <h3 data-i="c7h">Line up the pitch</h3>
+          <p data-i="c7p">In the [Map] tab of match details, line up the four corners of the pitch to see your heatmap over a satellite photo.</p>
         </div>
         <div class="card">
           <div class="icon">🎬</div>
-          <h3>15초 리플레이 영상</h3>
-          <p>경기장을 맞춘 경기는 내 움직임을 15초 리플레이 영상으로 만들어 SNS에 바로 올릴 수 있습니다.</p>
+          <h3 data-i="c8h">15-second replay video</h3>
+          <p data-i="c8p">For matches with the pitch lined up, turn your movement into a 15-second replay video and post it straight to social media.</p>
         </div>
         <div class="card">
           <div class="icon">🎨</div>
-          <h3>팀 색 바꾸기</h3>
-          <p>킥오프 전에 워치에서 두 팀 유니폼 색을 고르고, 경기가 끝난 뒤 휴대폰에서도 고칠 수 있습니다.</p>
+          <h3 data-i="c9h">Team colors</h3>
+          <p data-i="c9p">Pick both teams' kit colors on the watch before kick-off, and fix them on your phone after the match.</p>
         </div>
       </div>
     </div>
@@ -158,64 +154,73 @@
 
   <section>
     <div class="wrap">
-      <h2 class="section-title">타이머는 평생 무료</h2>
-      <p class="section-sub">경기 운영에 꼭 필요한 기능은 무료로, 기록과 분석은 PRO로.</p>
+      <h2 class="section-title" data-i="s2t">The timer is free forever</h2>
+      <p class="section-sub" data-i="s2s">What you need to run a match is free; records and analysis come with PRO.</p>
       <div class="plans">
         <div class="plan">
-          <h3>무료</h3>
-          <p class="price">₩0</p>
+          <h3 data-i="freeH">Free</h3>
+          <p class="price" data-i="freeP">$0</p>
           <ul>
-            <li>경기 타이머와 추가시간</li>
-            <li>진동 알림</li>
-            <li>경기 규칙 프리셋</li>
-            <li>승부차기 진행</li>
-            <li>점수(골 수) 기록</li>
+            <li data-i="fl1">Match timer and added time</li>
+            <li data-i="fl2">Vibration alerts</li>
+            <li data-i="fl3">Match rule presets</li>
+            <li data-i="fl4">Penalty shoot-outs</li>
+            <li data-i="fl5">Score (goal count)</li>
           </ul>
         </div>
         <div class="plan pro">
           <h3>PRO</h3>
-          <p class="price">월 ₩3,300 · 연 ₩22,000 · 7일 무료 체험</p>
+          <p class="price" data-i="proP">$2.99/month · $19.99/year · 7-day free trial</p>
           <ul>
-            <li>무료 기능 전부</li>
-            <li>카드·교체·등번호까지 상세 기록</li>
-            <li>심박수·거리·히트맵 운동 데이터</li>
-            <li>위성 사진 경기장 히트맵·리플레이 영상</li>
-            <li>경기 보고서와 공유</li>
-            <li>지난 경기 기록 보관·조회</li>
+            <li data-i="pl1">Everything in Free</li>
+            <li data-i="pl2">Detailed records with cards, substitutions and shirt numbers</li>
+            <li data-i="pl3">Heart rate, distance and heatmap workout data</li>
+            <li data-i="pl4">Satellite pitch heatmap and replay video</li>
+            <li data-i="pl5">Match reports and sharing</li>
+            <li data-i="pl6">Past match history</li>
           </ul>
         </div>
       </div>
-      <p class="note">구독은 휴대폰 앱에서 할 수 있으며, App Store 또는 Google Play 계정 설정에서 언제든 해지할 수 있습니다.</p>
+      <p class="note" data-i="plNote">Subscribe in the phone app; cancel anytime in your App Store or Google Play account settings.</p>
     </div>
   </section>
 
   <section>
     <div class="wrap">
-      <h2 class="section-title">내 기록은 내 기기에만</h2>
+      <h2 class="section-title" data-i="s3t">Your records stay on your devices</h2>
       <p class="section-sub">
-        계정도, 서버도 없습니다. 경기 기록과 건강 데이터는 내 워치와 휴대폰 사이에서만 오갑니다.<br />
-        <a href="privacy.html">개인정보처리방침 보기</a>
+        <span data-i="s3s">No account, no server. Match records and health data travel only between your watch and your phone.</span><br />
+        <a href="privacy-en.html" data-doc="privacy" data-i="s3link">Read the Privacy Policy</a>
       </p>
-    </div>
-  </section>
-
-  <section class="en" lang="en">
-    <div class="wrap">
-      <h2 class="section-title">For amateur referees</h2>
-      <p>Whistle PRO turns your Apple Watch or Wear OS watch into a match timer and notebook. Run the whole match from your wrist — periods, stoppage time, vibration alerts — and log goals, cards and substitutions in four taps.</p>
-      <p>After the final whistle, review the match, your heart rate, distance and heatmap on your iPhone or Android phone, and share a match report. Line up the four corners of your pitch to see the heatmap over a satellite photo, then turn it into a 15-second replay video for social media. The timer is free forever; PRO is $2.99/month or $19.99/year with a 7-day free trial.</p>
-      <p><a href="get.html" style="font-weight: 700; text-decoration: none;">Get the app (App Store · Google Play)</a></p>
     </div>
   </section>
 
   <footer>
     <div class="footer-links">
-      <a href="privacy.html">개인정보처리방침 · Privacy</a>
-      <a href="terms.html">이용약관 · Terms</a>
-      <a href="support.html">고객 지원 · Support</a>
+      <a href="privacy-en.html" data-doc="privacy" data-i="fPriv">Privacy Policy</a>
+      <a href="terms-en.html" data-doc="terms" data-i="fTerms">Terms of Use</a>
+      <a href="support-en.html" data-doc="support" data-i="fSupp">Support</a>
     </div>
+    <select class="lang" id="lang" aria-label="Language">
+      <option value="en">🌐 English</option>
+      <option value="ko">🌐 한국어</option>
+      <option value="pt-BR">🌐 Português</option>
+      <option value="es">🌐 Español</option>
+      <option value="ja">🌐 日本語</option>
+      <option value="zh-Hans">🌐 简体中文</option>
+      <option value="th">🌐 ไทย</option>
+      <option value="vi">🌐 Tiếng Việt</option>
+      <option value="id">🌐 Bahasa Indonesia</option>
+      <option value="de">🌐 Deutsch</option>
+      <option value="fr">🌐 Français</option>
+      <option value="it">🌐 Italiano</option>
+      <option value="nl">🌐 Nederlands</option>
+      <option value="pl">🌐 Polski</option>
+      <option value="tr">🌐 Türkçe</option>
+    </select>
     <p>kkt6394@gmail.com</p>
     <p>© 2026 Aiden · Whistle PRO</p>
   </footer>
+  <script src="index-l10n.js"></script>
 </body>
 </html>

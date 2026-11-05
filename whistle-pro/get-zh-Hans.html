@@ -72,7 +72,7 @@
 </ul>
 
 <p class="note" data-t="note">Timer is free · PRO: 7-day free trial</p>
-<p class="links"><a id="privacy" href="privacy-en.html" data-t="privacy">Privacy</a> · <a id="terms" href="terms-en.html" data-t="terms">Terms</a> · <a href="support.html" data-t="support">Support</a></p>
+<p class="links"><a id="privacy" href="privacy-en.html" data-t="privacy">Privacy</a> · <a id="terms" href="terms-en.html" data-t="terms">Terms</a> · <a id="support" href="support-en.html" data-t="support">Support</a></p>
 
 <select class="lang" id="lang" aria-label="Language">
   <option value="en">🌐 English</option>
@@ -84,6 +84,12 @@
   <option value="th">🌐 ไทย</option>
   <option value="vi">🌐 Tiếng Việt</option>
   <option value="id">🌐 Bahasa Indonesia</option>
+  <option value="de">🌐 Deutsch</option>
+  <option value="fr">🌐 Français</option>
+  <option value="it">🌐 Italiano</option>
+  <option value="nl">🌐 Nederlands</option>
+  <option value="pl">🌐 Polski</option>
+  <option value="tr">🌐 Türkçe</option>
 </select>
 
 <script>
@@ -116,7 +122,25 @@
           note: "Bấm giờ miễn phí · PRO dùng thử miễn phí 7 ngày", privacy: "Quyền riêng tư", terms: "Điều khoản", support: "Hỗ trợ", doc: "-vi" },
     id: { tag: "Timer untuk wasit sepak bola", dl: "Unduh di", soon: "Google Play · Wear OS segera hadir",
           f1: "<b>Sekali ketuk</b> untuk kick-off · tambahan waktu dihitung terpisah", f2: "Catat gol, kartu, dan pergantian di jam tangan", f3: "Laporan laga PDF, peta panas, dan video replay",
-          note: "Timer gratis · PRO: uji coba gratis 7 hari", privacy: "Privasi", terms: "Ketentuan", support: "Dukungan", doc: "-id" }
+          note: "Timer gratis · PRO: uji coba gratis 7 hari", privacy: "Privasi", terms: "Ketentuan", support: "Dukungan", doc: "-id" },
+    de: { tag: "Schiedsrichter-Uhr für Fußball", dl: "Laden im", soon: "Google Play · Wear OS demnächst",
+          f1: "<b>Ein Tipp</b> zum Anstoß · Nachspielzeit läuft separat", f2: "Tore, Karten und Wechsel auf der Uhr erfassen", f3: "Spielbericht als PDF, Heatmap und Replay-Video",
+          note: "Timer gratis · PRO: 7 Tage gratis testen", privacy: "Datenschutz", terms: "Nutzungsbedingungen", support: "Support", doc: "-de" },
+    fr: { tag: "Chrono d’arbitre de football", dl: "Télécharger dans l’", soon: "Google Play · Wear OS bientôt disponibles",
+          f1: "<b>Une touche</b> pour le coup d’envoi · temps additionnel décompté à part", f2: "Notez buts, cartons et remplacements sur la montre", f3: "Rapport de match en PDF, carte de chaleur et vidéo de replay",
+          note: "Chronomètre gratuit · PRO : essai gratuit de 7 jours", privacy: "Confidentialité", terms: "Conditions", support: "Assistance", doc: "-fr" },
+    it: { tag: "Timer per arbitri di calcio", dl: "Scarica su", soon: "Google Play · Wear OS in arrivo",
+          f1: "<b>Un tocco</b> per il calcio d’inizio · recupero contato a parte", f2: "Registra gol, cartellini e sostituzioni sull’orologio", f3: "Rapporto di gara in PDF, mappa di calore e video replay",
+          note: "Timer gratis · PRO: 7 giorni di prova gratuita", privacy: "Privacy", terms: "Termini", support: "Assistenza", doc: "-it" },
+    nl: { tag: "Voetbal scheidsrechter timer", dl: "Download in de", soon: "Google Play · Wear OS binnenkort",
+          f1: "<b>Eén tik</b> voor de aftrap · extra tijd loopt apart", f2: "Registreer doelpunten, kaarten en wissels op je horloge", f3: "Wedstrijdrapport als PDF, heatmap en replayvideo",
+          note: "Timer gratis · PRO: 7 dagen gratis proefperiode", privacy: "Privacy", terms: "Voorwaarden", support: "Ondersteuning", doc: "-nl" },
+    pl: { tag: "Stoper dla sędziów piłkarskich", dl: "Pobierz z", soon: "Google Play · Wear OS wkrótce",
+          f1: "<b>Jedno dotknięcie</b> i rozpoczęcie gry · czas doliczony liczony osobno", f2: "Zapisuj gole, kartki i zmiany na zegarku", f3: "Raport meczowy w PDF, mapa cieplna i wideo z powtórką",
+          note: "Stoper za darmo · PRO: 7 dni za darmo", privacy: "Prywatność", terms: "Warunki", support: "Pomoc", doc: "-pl" },
+    tr: { tag: "Futbol hakem saati, kronometre", dl: "İndirin", soon: "Google Play · Wear OS çok yakında",
+          f1: "<b>Tek dokunuşla</b> başlama vuruşu · ilave süre ayrı işler", f2: "Gol, kart ve değişiklikleri saatte kaydedin", f3: "PDF maç raporu, ısı haritası ve tekrar videosu",
+          note: "Zamanlayıcı ücretsiz · PRO: 7 gün ücretsiz deneme", privacy: "Gizlilik", terms: "Koşullar", support: "Destek", doc: "-tr" }
   };
 
   function pick(code) {
@@ -132,10 +156,11 @@
     document.documentElement.lang = lang;
     var nodes = document.querySelectorAll("[data-t]");
     for (var i = 0; i < nodes.length; i++) nodes[i].innerHTML = t[nodes[i].getAttribute("data-t")];
-    // 처리방침·약관: ko는 기본 파일(접미사 없음), 영어는 -en.
+    // 처리방침·약관·고객 지원: ko는 기본 파일(접미사 없음), 영어는 -en.
     var doc = t.doc !== undefined ? t.doc : "-en";
     document.getElementById("privacy").href = "privacy" + doc + ".html";
     document.getElementById("terms").href = "terms" + doc + ".html";
+    document.getElementById("support").href = "support" + doc + ".html";
     document.getElementById("lang").value = lang;
   }
 
