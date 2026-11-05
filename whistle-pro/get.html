@@ -139,7 +139,9 @@
   }
 
   var params = new URLSearchParams(location.search);
-  var lang = pick(params.get("lang"));
+  // 언어별 페이지(get-<언어>.html)는 생성 스크립트(newproject docs/release/og/make_get_pages.py)가 이 값을 그 언어로 바꾼다.
+  var FIXED_LANG = null;
+  var lang = pick(params.get("lang")) || FIXED_LANG;
   if (!lang) {
     var list = navigator.languages || [navigator.language];
     for (var i = 0; i < list.length && !lang; i++) lang = pick(list[i]);
