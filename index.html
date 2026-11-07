@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Aiden Studio</title>
-  <meta name="description" content="Aiden Studio는 작고 단단한 앱을 만드는 1인 개발 스튜디오입니다. Whistle PRO, 던전 픽셀 서바이버." />
+  <meta name="description" content="Aiden Studio는 작고 단단한 앱을 만드는 1인 개발 스튜디오입니다. Whistle PRO, 냠냠스쿨, PEAK, 던전 픽셀 서바이버." />
   <!-- 오픈그래프 (링크 공유 시 미리보기) -->
   <meta property="og:title" content="Aiden Studio" />
   <meta property="og:description" content="작고 단단한 앱을 만드는 1인 개발 스튜디오" />
@@ -51,32 +51,48 @@
 
     section { padding: 24px 0 72px; }
     h2 { font-size: 15px; font-weight: 700; color: var(--muted); margin-bottom: 18px; }
-    .apps { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 16px; }
-    .app {
+    .featured {
       display: flex;
-      gap: 18px;
-      align-items: flex-start;
+      gap: 24px;
+      align-items: center;
+      background: linear-gradient(135deg, #0f3d22, #1f7a43);
+      color: #fff;
+      border-radius: 22px;
+      padding: 28px;
+      text-decoration: none;
+      margin-bottom: 16px;
+      transition: transform .12s ease, box-shadow .12s ease;
+    }
+    .featured:hover { transform: translateY(-2px); box-shadow: 0 10px 28px rgba(15, 61, 34, 0.25); }
+    .featured img { width: 112px; height: 112px; border-radius: 26px; flex-shrink: 0; box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); }
+    .featured .kicker { font-size: 12px; font-weight: 700; letter-spacing: 1px; opacity: .8; }
+    .featured h3 { font-size: 26px; font-weight: 900; line-height: 1.25; }
+    .featured .desc { font-size: 15px; opacity: .92; margin: 4px 0 12px; }
+    .pill { display: inline-block; font-size: 12.5px; font-weight: 700; padding: 5px 13px; border-radius: 999px; margin: 0 6px 6px 0; }
+    .pill.solid { background: #fff; color: #17181a; }
+    .pill.ghost { background: rgba(255, 255, 255, 0.18); color: #fff; }
+    .apps { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(200px, 100%), 1fr)); gap: 14px; }
+    .app {
+      display: block;
       background: var(--panel);
       border: 1px solid var(--border);
       border-radius: 18px;
-      padding: 22px;
+      padding: 20px;
       text-decoration: none;
       transition: transform .12s ease, box-shadow .12s ease;
     }
     .app:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06); }
-    .app img { width: 72px; height: 72px; border-radius: 17px; flex-shrink: 0; }
-    .app h3 { font-size: 18px; font-weight: 900; line-height: 1.3; }
-    .app p { font-size: 14.5px; color: var(--muted); margin: 4px 0 10px; }
-    .tag {
-      display: inline-block;
-      font-size: 12px;
-      font-weight: 700;
-      padding: 3px 10px;
-      border-radius: 999px;
-      background: #eef1f6;
-      color: var(--muted);
+    .app img { width: 64px; height: 64px; border-radius: 15px; }
+    .app h3 { font-size: 16px; font-weight: 900; line-height: 1.3; margin-top: 12px; }
+    .app p { font-size: 14px; color: var(--muted); margin-top: 4px; line-height: 1.5; }
+    @media (max-width: 520px) {
+      .featured { flex-direction: column; align-items: flex-start; padding: 22px; }
+      .featured img { width: 88px; height: 88px; border-radius: 20px; }
+      .app { display: grid; grid-template-columns: 56px 1fr; column-gap: 14px; align-items: center; padding: 16px; }
+      .app img { width: 56px; height: 56px; border-radius: 13px; grid-row: span 2; }
+      .app h3 { margin-top: 0; }
+      .app p { margin-top: 0; }
     }
-    .tag.live { background: #e7f6ec; color: #11713a; }
 
     .contact {
       background: var(--panel);
@@ -114,22 +130,31 @@
   <section>
     <div class="wrap">
       <h2>앱 · Apps</h2>
+      <a class="featured" href="whistle-pro/">
+        <img src="whistle-pro/icon.png" alt="Whistle PRO 아이콘" />
+        <div>
+          <p class="kicker">대표 앱</p>
+          <h3>Whistle PRO</h3>
+          <p class="desc">축구 심판을 위한 워치 경기 타이머와 기록<br />Apple Watch · Wear OS</p>
+          <span class="pill solid">App Store</span>
+          <span class="pill ghost">Google Play 곧 출시</span>
+        </div>
+      </a>
       <div class="apps">
-        <a class="app" href="whistle-pro/">
-          <img src="whistle-pro/icon.png" alt="Whistle PRO 아이콘" />
-          <div>
-            <h3>Whistle PRO</h3>
-            <p>축구 심판을 위한 워치 경기 타이머와 기록 (Apple Watch · Wear OS)</p>
-            <span class="tag">App Store 출시</span>
-          </div>
+        <a class="app" href="https://apps.apple.com/kr/app/id6761044538">
+          <img src="apps/nyamnyam-school.jpg" alt="냠냠스쿨 아이콘" />
+          <h3>냠냠스쿨</h3>
+          <p>시간표·급식표·학사일정을 한눈에</p>
+        </a>
+        <a class="app" href="https://apps.apple.com/kr/app/id6761766821">
+          <img src="apps/peak.jpg" alt="PEAK 아이콘" />
+          <h3>PEAK: Feel the beat</h3>
+          <p>음악 비트에 반응하는 실시간 카메라</p>
         </a>
         <a class="app" href="survivor/">
           <img src="survivor/icon.jpg" alt="던전 픽셀 서바이버 아이콘" />
-          <div>
-            <h3>던전 픽셀 서바이버</h3>
-            <p>끝없이 몰려오는 적을 자동 공격으로 쓸어담는 픽셀 던전 서바이버</p>
-            <span class="tag live">App Store</span>
-          </div>
+          <h3>던전 픽셀 서바이버</h3>
+          <p>몰려오는 적을 자동 공격으로 버티는 픽셀 서바이버</p>
         </a>
       </div>
     </div>
