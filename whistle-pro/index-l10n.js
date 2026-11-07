@@ -59,6 +59,11 @@
     for (var i = 0; i < list.length && !lang; i++) lang = pick(list[i]);
   }
   apply(lang || "en");
+  // SNS 출처(?src=th 등, get.html에서 넘어옴)를 App Store 캠페인 토큰으로. pt = Apple 제공자 토큰(get.html과 같음)
+  var raw = params.get("src") || "";
+  var src = /^[a-z]{1,8}$/.test(raw) ? raw : "web";
+  var ios = document.getElementById("ios");
+  if (ios) ios.href = "https://apps.apple.com/app/id6823503970?pt=128690794&ct=" + src + "&mt=8";
   sel.addEventListener("change", function () {
     apply(this.value);
     // 고른 언어를 주소에 남겨 그대로 링크할 수 있게.

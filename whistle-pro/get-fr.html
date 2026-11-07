@@ -3,6 +3,16 @@
 <html lang="fr">
 <head>
 <meta charset="utf-8">
+<script>
+  // 11-08 통일: 다운로드 페이지는 소개 페이지(./)로 넘긴다. SNS 링크 미리보기(og 태그)는 이 파일 것을 쓰고, 화면은 소개 페이지 하나.
+  (function () {
+    var FIXED_LANG = "fr";
+    var q = new URLSearchParams(location.search);
+    if (FIXED_LANG && !q.get("lang")) q.set("lang", FIXED_LANG);
+    var qs = q.toString();
+    location.replace("./" + (qs ? "?" + qs : "") + location.hash);
+  })();
+</script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#000000">
 <title>Get Whistle PRO</title>
