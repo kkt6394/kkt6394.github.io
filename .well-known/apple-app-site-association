@@ -1,0 +1,10 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": ["YC98G989ZF.com.aidenstudio.whistlepro"],
+        "components": [{ "/": "/whistle-pro/open/*", "comment": "Whistle PRO app (in-app event deep link)" }]
+      }
+    ]
+  }
+}
