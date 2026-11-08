@@ -53,13 +53,13 @@
     .section-title { font-size: clamp(22px, 4vw, 28px); font-weight: 900; text-align: center; margin-bottom: 10px; }
     .section-sub { text-align: center; color: var(--muted); margin-bottom: 36px; }
     .section-sub a { color: var(--lime); font-weight: 700; text-decoration: none; }
-    .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 12px; }
+    .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(240px, 100%), 1fr)); gap: 12px; }
     .card { background: var(--panel); border-radius: 16px; padding: 22px 20px; }
     .card .icon { font-size: 26px; margin-bottom: 8px; }
     .card h3 { font-size: 17px; margin-bottom: 6px; }
     .card p { font-size: 14.5px; color: var(--muted); }
 
-    .plans { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 12px; }
+    .plans { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(260px, 100%), 1fr)); gap: 12px; }
     .plan { background: var(--panel); border-radius: 16px; padding: 26px 24px; }
     .plan.pro { box-shadow: inset 0 0 0 2px var(--lime); }
     .plan h3 { font-size: 20px; font-weight: 900; }
