@@ -16,9 +16,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#000000">
 <title>Get Whistle PRO</title>
-<meta name="description" content="Whistle PRO — Timer per arbitri di calcio · App Store · Google Play · Wear OS in arrivo">
+<meta name="description" content="Whistle PRO — Timer per arbitri di calcio · App Store · Google Play">
 <meta property="og:title" content="Whistle PRO — Timer per arbitri di calcio">
-<meta property="og:description" content="Timer per arbitri di calcio · App Store · Google Play · Wear OS in arrivo">
+<meta property="og:description" content="Timer per arbitri di calcio · App Store · Google Play">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://kkt6394.github.io/whistle-pro/get-it.html">
 <meta property="og:image" content="https://kkt6394.github.io/whistle-pro/og-it.png">
@@ -68,11 +68,10 @@
   <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16.4 12.6c0-2.5 2-3.7 2.1-3.8-1.2-1.7-3-1.9-3.6-2-1.5-.2-3 .9-3.8.9-.8 0-2-.9-3.3-.8-1.7 0-3.2 1-4.1 2.5-1.8 3.1-.5 7.6 1.3 10.1.9 1.2 1.9 2.6 3.2 2.5 1.3-.1 1.8-.8 3.3-.8s2 .8 3.3.8c1.4 0 2.3-1.2 3.1-2.5 1-1.4 1.4-2.8 1.4-2.9 0 0-2.7-1-2.9-4zM13.9 5.2c.7-.8 1.2-2 1-3.2-1 0-2.2.7-2.9 1.5-.6.7-1.2 1.9-1 3 1.1.1 2.2-.5 2.9-1.3z"/></svg>
   <span><small data-t="dl">Download on the</small>App Store</span>
 </a>
-<!-- Play 공개 전(2026-11-05): "곧 출시" 줄만 두고 링크를 걸지 않는다. 공개되면 <a class="btn" id="android">로 바꾸고 아래 스크립트 줄을 되살린다. -->
-<div class="soon" id="android">
+<a class="btn" id="android" href="https://play.google.com/store/apps/details?id=com.aidenstudio.whistlepro">
   <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3.6 1.8c-.3.3-.5.8-.5 1.4v17.6c0 .6.2 1.1.5 1.4l.1.1 9.9-9.9v-.2L3.7 1.7l-.1.1zm13.2 13.4-3.3-3.3v-.2l3.3-3.3.1.1 3.9 2.2c1.1.6 1.1 1.7 0 2.3l-3.9 2.2h-.1zM16 15.4 12.6 12 3.6 21c.4.4 1 .4 1.7 0L16 15.4zM16 8.6 5.3 2.5c-.7-.4-1.3-.3-1.7.1l9 9L16 8.6z"/></svg>
-  <span data-t="soon">Google Play · Wear OS coming soon</span>
-</div>
+  <span>Google Play</span>
+</a>
 </div>
 
 <ul class="feat">
@@ -188,10 +187,9 @@
   var raw = params.get("src") || "";
   var src = /^[a-z]{1,8}$/.test(raw) ? raw : "web";
   document.getElementById("ios").href = "https://apps.apple.com/app/id6823503970?pt=128690794&ct=" + src + "&mt=8";  // pt = Apple 제공자 토큰(ASC 앱 분석 > 캠페인 링크 생성에서 확인, 11-05)
-  // 안드로이드로 열면 Google Play 줄을 위로(공개 전엔 "곧 출시" 줄 그대로).
+  // 안드로이드로 열면 Google Play 줄을 위로.
   if (/Android/i.test(navigator.userAgent)) document.getElementById("stores").className += " android-first";
-  // Play 공개되면 되살린다:
-  // document.getElementById("android").href = "https://play.google.com/store/apps/details?id=com.aidenstudio.whistlepro&referrer=" + encodeURIComponent("utm_source=" + src + "&utm_medium=social&utm_campaign=launch");
+  document.getElementById("android").href = "https://play.google.com/store/apps/details?id=com.aidenstudio.whistlepro&referrer=" + encodeURIComponent("utm_source=" + src + "&utm_medium=social&utm_campaign=launch");
 })();
 </script>
 </body>

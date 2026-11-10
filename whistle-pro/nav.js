@@ -39,6 +39,10 @@
   var ios = document.getElementById("ios");
   if (ios) ios.href = "https://apps.apple.com/app/id6823503970?pt=128690794&ct=" + src + "&mt=8";
 
+  // Play는 설치 출처를 referrer로 받는다(Play Console 획득 보고서의 UTM).
+  var android = document.getElementById("android");
+  if (android) android.href = "https://play.google.com/store/apps/details?id=com.aidenstudio.whistlepro&referrer=" + encodeURIComponent("utm_source=" + src + "&utm_medium=website");
+
   var sel = document.getElementById("lang");
   if (sel) {
     sel.value = here;
