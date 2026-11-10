@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<!-- 생성 파일: ../index.html(영어 틀)과 ../index-l10n.js를 고친 뒤 newproject docs/release/og/make_index_pages.py로 다시 만든다. 직접 고치지 말 것. -->
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Whistle PRO — App para árbitros de fútbol en Apple Watch, Galaxy Watch y Wear OS</title>
+  <meta name="description" content="Dirija el partido solo con el reloj: cronómetro, tiempo añadido, registro de eventos e informe del partido. Whistle PRO, para árbitros de fútbol." />
+  <link rel="canonical" href="https://kkt6394.github.io/whistle-pro/es/" />
+  <!-- hreflang:start -->
+  <link rel="alternate" hreflang="en" href="https://kkt6394.github.io/whistle-pro/" />
+  <link rel="alternate" hreflang="ko" href="https://kkt6394.github.io/whistle-pro/ko/" />
+  <link rel="alternate" hreflang="ja" href="https://kkt6394.github.io/whistle-pro/ja/" />
+  <link rel="alternate" hreflang="zh-Hans" href="https://kkt6394.github.io/whistle-pro/zh-Hans/" />
+  <link rel="alternate" hreflang="pt-BR" href="https://kkt6394.github.io/whistle-pro/pt-BR/" />
+  <link rel="alternate" hreflang="es" href="https://kkt6394.github.io/whistle-pro/es/" />
+  <link rel="alternate" hreflang="th" href="https://kkt6394.github.io/whistle-pro/th/" />
+  <link rel="alternate" hreflang="vi" href="https://kkt6394.github.io/whistle-pro/vi/" />
+  <link rel="alternate" hreflang="id" href="https://kkt6394.github.io/whistle-pro/id/" />
+  <link rel="alternate" hreflang="de" href="https://kkt6394.github.io/whistle-pro/de/" />
+  <link rel="alternate" hreflang="fr" href="https://kkt6394.github.io/whistle-pro/fr/" />
+  <link rel="alternate" hreflang="it" href="https://kkt6394.github.io/whistle-pro/it/" />
+  <link rel="alternate" hreflang="nl" href="https://kkt6394.github.io/whistle-pro/nl/" />
+  <link rel="alternate" hreflang="pl" href="https://kkt6394.github.io/whistle-pro/pl/" />
+  <link rel="alternate" hreflang="tr" href="https://kkt6394.github.io/whistle-pro/tr/" />
+  <link rel="alternate" hreflang="x-default" href="https://kkt6394.github.io/whistle-pro/" />
+  <!-- hreflang:end -->
+  <!-- 오픈그래프 (링크 공유 시 미리보기) -->
+  <meta property="og:title" content="Whistle PRO" />
+  <meta property="og:description" content="Cronómetro en el reloj para árbitros de fútbol" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://kkt6394.github.io/whistle-pro/es/" />
+  <meta property="og:image" content="https://kkt6394.github.io/whistle-pro/og-es.png" />
+  <meta property="og:image:width" content="1024" />
+  <meta property="og:image:height" content="500" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="icon" href="../icon.png" />
+  <link rel="apple-touch-icon" href="../icon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700;900&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --lime: #C6FF3D;     /* 형광 조끼 라임 (DESIGN.md vest-lime) */
+      --bg: #000000;       /* 경기장 검정 */
+      --panel: #1C1C1E;    /* 카드 차콜 */
+      --chip: #2C2C2E;     /* 칩 그라파이트 */
+      --text: #FFFFFF;
+      --muted: #8E8E93;
+      --yellow: #FFD60A;   /* 옐로카드 */
+      --red: #FF453A;      /* 레드카드 */
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; background: var(--bg); }
+    body { word-break: keep-all; overflow-wrap: break-word;
+      font-family: -apple-system, "Segoe UI", Roboto, "Noto Sans KR", "Noto Sans Thai", sans-serif;
+      background: var(--bg); color: var(--text); line-height: 1.7; }
+    .wrap { max-width: 920px; margin: 0 auto; padding: 0 20px; }
+
+    header { text-align: center; padding: 64px 20px 40px; }
+    .app-icon { width: 104px; height: 104px; border-radius: 24px; margin-bottom: 22px; }
+    h1 { font-size: clamp(34px, 7vw, 52px); font-weight: 900; letter-spacing: -0.5px; line-height: 1.2; }
+    h1 em { font-style: normal; color: var(--lime); }
+    .tagline { font-size: clamp(16px, 2.6vw, 19px); max-width: 560px; margin: 14px auto 30px; color: #d1d1d6; }
+    .cta { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+    .btn { display: inline-flex; align-items: center; gap: 8px; font-weight: 700; font-size: 15px; padding: 13px 22px;
+      border-radius: 14px; text-decoration: none; background: var(--panel); color: var(--muted); }
+    .btn-primary { background: var(--lime); color: #000; }
+    .hero { display: block; width: 100%; max-width: 880px; margin: 40px auto 0; border-radius: 20px; }
+
+    section { padding: 60px 0; }
+    section + section { border-top: 1px solid var(--chip); }
+    .section-title { font-size: clamp(22px, 4vw, 28px); font-weight: 900; text-align: center; margin-bottom: 10px; }
+    .section-sub { text-align: center; color: var(--muted); margin-bottom: 36px; }
+    .section-sub a { color: var(--lime); font-weight: 700; text-decoration: none; }
+    .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(240px, 100%), 1fr)); gap: 12px; }
+    .card { background: var(--panel); border-radius: 16px; padding: 22px 20px; }
+    .card .icon { font-size: 26px; margin-bottom: 8px; }
+    .card h3 { font-size: 17px; margin-bottom: 6px; }
+    .card p { font-size: 14.5px; color: var(--muted); }
+
+    .plans { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(260px, 100%), 1fr)); gap: 12px; }
+    .plan { background: var(--panel); border-radius: 16px; padding: 26px 24px; }
+    .plan.pro { box-shadow: inset 0 0 0 2px var(--lime); }
+    .plan h3 { font-size: 20px; font-weight: 900; }
+    .plan.pro h3 { color: var(--lime); }
+    .plan .price { color: var(--muted); font-size: 14.5px; margin: 4px 0 16px; }
+    .plan.pro .price { color: #fff; font-weight: 700; }
+    .plan ul { list-style: none; }
+    .plan li { padding: 6px 0 6px 26px; position: relative; font-size: 15px; }
+    .plan li::before { content: "✓"; position: absolute; left: 0; color: var(--lime); font-weight: 900; }
+    .note { text-align: center; color: var(--muted); font-size: 13.5px; margin-top: 18px; }
+
+    .chip { display: inline-block; width: 12px; height: 16px; border-radius: 2px; vertical-align: -2px; margin-right: 2px; }
+    .chip.y { background: var(--yellow); }
+    .chip.r { background: var(--red); }
+
+    footer { border-top: 1px solid var(--chip); padding: 36px 20px 44px; text-align: center; color: var(--muted); font-size: 14px; }
+    footer a { color: #d1d1d6; text-decoration: none; font-weight: 700; }
+    footer a:hover { text-decoration: underline; }
+    .footer-links { margin-bottom: 12px; }
+    .footer-links a { margin: 0 10px; }
+    .lang { margin: 0 0 14px; appearance: none; -webkit-appearance: none; background: var(--bg); color: var(--muted);
+      border: 1px solid var(--chip); border-radius: 99px; padding: 5px 14px; font: inherit; font-size: 13px; text-align: center; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <img class="app-icon" src="../icon.png" alt="Icono de la app Whistle PRO" data-i-alt="iconAlt" />
+      <h1>Whistle <em>PRO</em></h1>
+      <p class="tagline" data-i="tag">Póngase el reloj y salga al campo.<br />Cronómetro y registro de partidos para Apple Watch y Wear OS, pensado para árbitros de fútbol.</p>
+      <div class="cta">
+        <a class="btn btn-primary" id="ios" href="https://apps.apple.com/app/id6823503970?pt=128690794&ct=web&mt=8" data-i="ios">Descargar en App Store</a>
+        <span class="btn" data-i="soon">Google Play próximamente</span>
+      </div>
+      <img class="hero" id="hero" src="../og-es.png" alt="Pantallas de partido de Whistle PRO en Apple Watch y en un reloj Wear OS" data-i-alt="heroAlt" />
+    </div>
+  </header>
+
+  <section>
+    <div class="wrap">
+      <h2 class="section-title" data-i="s1t">El reloj durante el partido, el teléfono después</h2>
+      <p class="section-sub" data-i="s1s">Fútbol aficionado, clubes y ligas juveniles. Todo el partido funciona con un solo reloj, sin teléfono.</p>
+      <div class="features">
+        <div class="card">
+          <div class="icon">⌚</div>
+          <h3 data-i="c0h">Control sin mirar</h3>
+          <p data-i="c0p">Pausa y reanuda, anota un gol o deshaz con los botones, la corona o el bisel del reloj mientras corres (PRO). En Apple Watch y relojes Wear OS como Galaxy Watch.</p>
+        </div>
+        <div class="card">
+          <div class="icon">⏱️</div>
+          <h3 data-i="c1h">Cronómetro y tiempo añadido</h3>
+          <p data-i="c1p">Dos tiempos, cuartos, prórroga y penales. Las interrupciones se miden aparte para sugerir el tiempo añadido.</p>
+        </div>
+        <div class="card">
+          <div class="icon">📳</div>
+          <h3 data-i="c2h">Avisos por vibración</h3>
+          <p data-i="c2p">La muñeca vibra justo antes del final, al terminar el descanso y cuando un jugador en expulsión temporal puede volver.</p>
+        </div>
+        <div class="card">
+          <div class="icon">⚽</div>
+          <h3 data-i="c3h">Registro en cuatro toques</h3>
+          <p data-i="c3p">Registre goles, <span class="chip y"></span>amonestaciones, <span class="chip r"></span>expulsiones y cambios con equipo y dorsal. La segunda amonestación se convierte en expulsión automáticamente.</p>
+        </div>
+        <div class="card">
+          <div class="icon">📋</div>
+          <h3 data-i="c4h">Con las reglas de su liga</h3>
+          <p data-i="c4p">Parta del estándar FIFA, cambie la duración, los jugadores, el límite de cambios y la expulsión temporal, y guárdelo como preajuste.</p>
+        </div>
+        <div class="card">
+          <div class="icon">❤️</div>
+          <h3 data-i="c5h">Datos de entreno</h3>
+          <p data-i="c5p">La frecuencia cardíaca, la distancia, los sprints y el mapa de calor se guardan con el registro del partido y como entreno en la app Salud (iPhone) o en Health Connect (Android).</p>
+        </div>
+        <div class="card">
+          <div class="icon">📤</div>
+          <h3 data-i="c6h">Informe del partido</h3>
+          <p data-i="c6p">Al terminar el partido, comparta desde el teléfono un informe con goles, tarjetas, cambios y las reglas aplicadas.</p>
+        </div>
+        <div class="card">
+          <div class="icon">🛰️</div>
+          <h3 data-i="c7h">Ajuste el campo</h3>
+          <p data-i="c7p">En la pestaña [Mapa] del detalle del partido, ajuste las cuatro esquinas del campo para ver su mapa de calor sobre una foto satelital.</p>
+        </div>
+        <div class="card">
+          <div class="icon">🎬</div>
+          <h3 data-i="c8h">Video de repetición de 15 segundos</h3>
+          <p data-i="c8p">En los partidos con el campo ajustado, convierta sus movimientos en un video de repetición de 15 segundos y publíquelo en redes sociales.</p>
+        </div>
+        <div class="card">
+          <div class="icon">🎨</div>
+          <h3 data-i="c9h">Colores de los equipos</h3>
+          <p data-i="c9p">Elija en el reloj los colores de las camisetas de ambos equipos antes del saque inicial y corríjalos en el teléfono después del partido.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <h2 class="section-title" data-i="s2t">El cronómetro es gratis para siempre</h2>
+      <p class="section-sub" data-i="s2s">Lo esencial para dirigir el partido es gratis; los registros y el análisis, con PRO.</p>
+      <div class="plans">
+        <div class="plan">
+          <h3 data-i="freeH">Gratis</h3>
+          <p class="price" data-i="freeP">Sin suscripción</p>
+          <ul>
+            <li data-i="fl1">Cronómetro y tiempo añadido</li>
+            <li data-i="fl2">Avisos por vibración</li>
+            <li data-i="fl3">Preajustes de reglas</li>
+            <li data-i="fl4">Tanda de penales</li>
+            <li data-i="fl5">Marcador (número de goles)</li>
+          </ul>
+        </div>
+        <div class="plan pro">
+          <h3>PRO</h3>
+          <p class="price" data-i="proP">Mensual o anual · 7 días de prueba gratis</p>
+          <ul>
+            <li data-i="pl1">Todo lo gratuito</li>
+            <li data-i="pl0">Control con botones, corona y bisel sin mirar</li>
+            <li data-i="pl2">Registro detallado con tarjetas, cambios y dorsales</li>
+            <li data-i="pl3">Datos de entreno: frecuencia cardíaca, distancia y mapa de calor</li>
+            <li data-i="pl4">Mapa de calor sobre foto satelital del campo y video de repetición</li>
+            <li data-i="pl5">Informes del partido y compartir</li>
+            <li data-i="pl6">Historial de partidos anteriores</li>
+          </ul>
+        </div>
+      </div>
+      <p class="note" data-i="plNote">Suscríbase en la app del teléfono y cancele cuando quiera en la configuración de su cuenta de App Store o Google Play.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <h2 class="section-title" data-i="s3t">Sus registros, solo en sus dispositivos</h2>
+      <p class="section-sub">
+        <span data-i="s3s">Sin cuenta ni servidor. Los registros de partidos y los datos de salud solo viajan entre su reloj y su teléfono.</span><br />
+        <a href="../privacy-es.html" data-doc="privacy" data-i="s3link">Ver la Política de privacidad</a>
+      </p>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-links">
+      <a href="../privacy-es.html" data-doc="privacy" data-i="fPriv">Privacidad</a>
+      <a href="../terms-es.html" data-doc="terms" data-i="fTerms">Términos de uso</a>
+      <a href="../support-es.html" data-doc="support" data-i="fSupp">Soporte</a>
+    </div>
+    <select class="lang" id="lang" aria-label="Language">
+      <option value="en">🌐 English</option>
+      <option value="ko">🌐 한국어</option>
+      <option value="pt-BR">🌐 Português</option>
+      <option value="es" selected>🌐 Español</option>
+      <option value="ja">🌐 日本語</option>
+      <option value="zh-Hans">🌐 简体中文</option>
+      <option value="th">🌐 ไทย</option>
+      <option value="vi">🌐 Tiếng Việt</option>
+      <option value="id">🌐 Bahasa Indonesia</option>
+      <option value="de">🌐 Deutsch</option>
+      <option value="fr">🌐 Français</option>
+      <option value="it">🌐 Italiano</option>
+      <option value="nl">🌐 Nederlands</option>
+      <option value="pl">🌐 Polski</option>
+      <option value="tr">🌐 Türkçe</option>
+    </select>
+    <p>kkt6394@gmail.com</p>
+    <p>© 2026 Aiden · Whistle PRO</p>
+  </footer>
+  <script src="../nav.js"></script>
+</body>
+</html>

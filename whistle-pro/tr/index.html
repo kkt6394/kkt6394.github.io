@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<!-- 생성 파일: ../index.html(영어 틀)과 ../index-l10n.js를 고친 뒤 newproject docs/release/og/make_index_pages.py로 다시 만든다. 직접 고치지 말 것. -->
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Whistle PRO — Futbol hakemleri için uygulama: Apple Watch, Galaxy Watch ve Wear OS</title>
+  <meta name="description" content="Maçı yalnızca saatinizle yönetin: maç zamanlayıcısı, ilave süre, olay kaydı ve maç raporu. Futbol hakemleri için Whistle PRO." />
+  <link rel="canonical" href="https://kkt6394.github.io/whistle-pro/tr/" />
+  <!-- hreflang:start -->
+  <link rel="alternate" hreflang="en" href="https://kkt6394.github.io/whistle-pro/" />
+  <link rel="alternate" hreflang="ko" href="https://kkt6394.github.io/whistle-pro/ko/" />
+  <link rel="alternate" hreflang="ja" href="https://kkt6394.github.io/whistle-pro/ja/" />
+  <link rel="alternate" hreflang="zh-Hans" href="https://kkt6394.github.io/whistle-pro/zh-Hans/" />
+  <link rel="alternate" hreflang="pt-BR" href="https://kkt6394.github.io/whistle-pro/pt-BR/" />
+  <link rel="alternate" hreflang="es" href="https://kkt6394.github.io/whistle-pro/es/" />
+  <link rel="alternate" hreflang="th" href="https://kkt6394.github.io/whistle-pro/th/" />
+  <link rel="alternate" hreflang="vi" href="https://kkt6394.github.io/whistle-pro/vi/" />
+  <link rel="alternate" hreflang="id" href="https://kkt6394.github.io/whistle-pro/id/" />
+  <link rel="alternate" hreflang="de" href="https://kkt6394.github.io/whistle-pro/de/" />
+  <link rel="alternate" hreflang="fr" href="https://kkt6394.github.io/whistle-pro/fr/" />
+  <link rel="alternate" hreflang="it" href="https://kkt6394.github.io/whistle-pro/it/" />
+  <link rel="alternate" hreflang="nl" href="https://kkt6394.github.io/whistle-pro/nl/" />
+  <link rel="alternate" hreflang="pl" href="https://kkt6394.github.io/whistle-pro/pl/" />
+  <link rel="alternate" hreflang="tr" href="https://kkt6394.github.io/whistle-pro/tr/" />
+  <link rel="alternate" hreflang="x-default" href="https://kkt6394.github.io/whistle-pro/" />
+  <!-- hreflang:end -->
+  <!-- 오픈그래프 (링크 공유 시 미리보기) -->
+  <meta property="og:title" content="Whistle PRO" />
+  <meta property="og:description" content="Futbol hakemleri için saat zamanlayıcısı" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://kkt6394.github.io/whistle-pro/tr/" />
+  <meta property="og:image" content="https://kkt6394.github.io/whistle-pro/og-tr.png" />
+  <meta property="og:image:width" content="1024" />
+  <meta property="og:image:height" content="500" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="icon" href="../icon.png" />
+  <link rel="apple-touch-icon" href="../icon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700;900&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --lime: #C6FF3D;     /* 형광 조끼 라임 (DESIGN.md vest-lime) */
+      --bg: #000000;       /* 경기장 검정 */
+      --panel: #1C1C1E;    /* 카드 차콜 */
+      --chip: #2C2C2E;     /* 칩 그라파이트 */
+      --text: #FFFFFF;
+      --muted: #8E8E93;
+      --yellow: #FFD60A;   /* 옐로카드 */
+      --red: #FF453A;      /* 레드카드 */
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; background: var(--bg); }
+    body { word-break: keep-all; overflow-wrap: break-word;
+      font-family: -apple-system, "Segoe UI", Roboto, "Noto Sans KR", "Noto Sans Thai", sans-serif;
+      background: var(--bg); color: var(--text); line-height: 1.7; }
+    .wrap { max-width: 920px; margin: 0 auto; padding: 0 20px; }
+
+    header { text-align: center; padding: 64px 20px 40px; }
+    .app-icon { width: 104px; height: 104px; border-radius: 24px; margin-bottom: 22px; }
+    h1 { font-size: clamp(34px, 7vw, 52px); font-weight: 900; letter-spacing: -0.5px; line-height: 1.2; }
+    h1 em { font-style: normal; color: var(--lime); }
+    .tagline { font-size: clamp(16px, 2.6vw, 19px); max-width: 560px; margin: 14px auto 30px; color: #d1d1d6; }
+    .cta { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+    .btn { display: inline-flex; align-items: center; gap: 8px; font-weight: 700; font-size: 15px; padding: 13px 22px;
+      border-radius: 14px; text-decoration: none; background: var(--panel); color: var(--muted); }
+    .btn-primary { background: var(--lime); color: #000; }
+    .hero { display: block; width: 100%; max-width: 880px; margin: 40px auto 0; border-radius: 20px; }
+
+    section { padding: 60px 0; }
+    section + section { border-top: 1px solid var(--chip); }
+    .section-title { font-size: clamp(22px, 4vw, 28px); font-weight: 900; text-align: center; margin-bottom: 10px; }
+    .section-sub { text-align: center; color: var(--muted); margin-bottom: 36px; }
+    .section-sub a { color: var(--lime); font-weight: 700; text-decoration: none; }
+    .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(240px, 100%), 1fr)); gap: 12px; }
+    .card { background: var(--panel); border-radius: 16px; padding: 22px 20px; }
+    .card .icon { font-size: 26px; margin-bottom: 8px; }
+    .card h3 { font-size: 17px; margin-bottom: 6px; }
+    .card p { font-size: 14.5px; color: var(--muted); }
+
+    .plans { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(260px, 100%), 1fr)); gap: 12px; }
+    .plan { background: var(--panel); border-radius: 16px; padding: 26px 24px; }
+    .plan.pro { box-shadow: inset 0 0 0 2px var(--lime); }
+    .plan h3 { font-size: 20px; font-weight: 900; }
+    .plan.pro h3 { color: var(--lime); }
+    .plan .price { color: var(--muted); font-size: 14.5px; margin: 4px 0 16px; }
+    .plan.pro .price { color: #fff; font-weight: 700; }
+    .plan ul { list-style: none; }
+    .plan li { padding: 6px 0 6px 26px; position: relative; font-size: 15px; }
+    .plan li::before { content: "✓"; position: absolute; left: 0; color: var(--lime); font-weight: 900; }
+    .note { text-align: center; color: var(--muted); font-size: 13.5px; margin-top: 18px; }
+
+    .chip { display: inline-block; width: 12px; height: 16px; border-radius: 2px; vertical-align: -2px; margin-right: 2px; }
+    .chip.y { background: var(--yellow); }
+    .chip.r { background: var(--red); }
+
+    footer { border-top: 1px solid var(--chip); padding: 36px 20px 44px; text-align: center; color: var(--muted); font-size: 14px; }
+    footer a { color: #d1d1d6; text-decoration: none; font-weight: 700; }
+    footer a:hover { text-decoration: underline; }
+    .footer-links { margin-bottom: 12px; }
+    .footer-links a { margin: 0 10px; }
+    .lang { margin: 0 0 14px; appearance: none; -webkit-appearance: none; background: var(--bg); color: var(--muted);
+      border: 1px solid var(--chip); border-radius: 99px; padding: 5px 14px; font: inherit; font-size: 13px; text-align: center; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <img class="app-icon" src="../icon.png" alt="Whistle PRO uygulama simgesi" data-i-alt="iconAlt" />
+      <h1>Whistle <em>PRO</em></h1>
+      <p class="tagline" data-i="tag">Saatinizi takın ve sahaya çıkın.<br />Futbol hakemleri için Apple Watch ve Wear OS maç zamanlayıcısı ve kayıt defteri.</p>
+      <div class="cta">
+        <a class="btn btn-primary" id="ios" href="https://apps.apple.com/app/id6823503970?pt=128690794&ct=web&mt=8" data-i="ios">App Store’dan indirin</a>
+        <span class="btn" data-i="soon">Google Play çok yakında</span>
+      </div>
+      <img class="hero" id="hero" src="../og-tr.png" alt="Apple Watch ve Wear OS saatte Whistle PRO maç ekranları" data-i-alt="heroAlt" />
+    </div>
+  </header>
+
+  <section>
+    <div class="wrap">
+      <h2 class="section-title" data-i="s1t">Maç sırasında saat, maçtan sonra telefon</h2>
+      <p class="section-sub" data-i="s1s">Halı saha, kulüpler, gençler ligi. Maçın tamamı telefonsuz, tek bir saatle yürür.</p>
+      <div class="features">
+        <div class="card">
+          <div class="icon">⌚</div>
+          <h3 data-i="c0h">Bakmadan kontrol</h3>
+          <p data-i="c0p">Koşarken saatin düğmeleri, crown'u veya çerçevesiyle duraklatın, devam edin, gol ekleyin ya da geri alın (PRO). Apple Watch'ta ve Galaxy Watch gibi Wear OS saatlerinde.</p>
+        </div>
+        <div class="card">
+          <div class="icon">⏱️</div>
+          <h3 data-i="c1h">Maç zamanlayıcısı ve ilave süre</h3>
+          <p data-i="c1p">Devreler, çeyrekler, uzatma ve penaltılar. Duraklama süresi ayrı ölçülür ve önerilen ilave süre gösterilir.</p>
+        </div>
+        <div class="card">
+          <div class="icon">📳</div>
+          <h3 data-i="c2h">Titreşim uyarıları</h3>
+          <p data-i="c2p">Bitişe az kala, devre arası bittiğinde ve geçici oyun dışı bırakılan oyuncu dönebileceğinde bileğiniz titrer.</p>
+        </div>
+        <div class="card">
+          <div class="icon">⚽</div>
+          <h3 data-i="c3h">Dört dokunuşla kayıt</h3>
+          <p data-i="c3p">Golleri, <span class="chip y"></span>ihtarları, <span class="chip r"></span>ihraçları ve değişiklikleri takım ve forma numarasıyla kaydedin. İkinci ihtar otomatik olarak ihraca dönüşür.</p>
+        </div>
+        <div class="card">
+          <div class="icon">📋</div>
+          <h3 data-i="c4h">Liginizin kurallarıyla</h3>
+          <p data-i="c4p">FIFA standardından başlayın; maç süresini, oyuncu sayısını, değişiklik sınırını ve geçici oyun dışı bırakmayı değiştirip şablon olarak kaydedin.</p>
+        </div>
+        <div class="card">
+          <div class="icon">❤️</div>
+          <h3 data-i="c5h">Antrenman verileri</h3>
+          <p data-i="c5p">Kalp atış hızı, mesafe, sprintler ve hareket ısı haritası maç kaydıyla birlikte saklanır ve Sağlık uygulamasına (iPhone) veya Health Connect’e (Android) antrenman olarak kaydedilir.</p>
+        </div>
+        <div class="card">
+          <div class="icon">📤</div>
+          <h3 data-i="c6h">Maç raporu</h3>
+          <p data-i="c6p">Maç bitince gollerin, kartların, değişikliklerin ve uygulanan kuralların yer aldığı raporu telefonunuzdan hemen paylaşın.</p>
+        </div>
+        <div class="card">
+          <div class="icon">🛰️</div>
+          <h3 data-i="c7h">Sahayı hizalayın</h3>
+          <p data-i="c7p">Maç ayrıntısındaki [Harita] sekmesinde sahanın dört köşesini hizalayın; hareket ısı haritanız uydu fotoğrafının üzerinde görünür.</p>
+        </div>
+        <div class="card">
+          <div class="icon">🎬</div>
+          <h3 data-i="c8h">15 saniyelik tekrar videosu</h3>
+          <p data-i="c8p">Sahası hizalanan maçlarda hareketlerinizi 15 saniyelik bir tekrar videosuna dönüştürüp sosyal medyada hemen paylaşın.</p>
+        </div>
+        <div class="card">
+          <div class="icon">🎨</div>
+          <h3 data-i="c9h">Takım renkleri</h3>
+          <p data-i="c9p">Başlama vuruşundan önce iki takımın forma renklerini saatte seçin, maçtan sonra telefonda düzeltin.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <h2 class="section-title" data-i="s2t">Zamanlayıcı sonsuza dek ücretsiz</h2>
+      <p class="section-sub" data-i="s2s">Maç yönetmek için gerekenler ücretsiz; kayıt ve analiz PRO’da.</p>
+      <div class="plans">
+        <div class="plan">
+          <h3 data-i="freeH">Ücretsiz</h3>
+          <p class="price" data-i="freeP">Abonelik gerekmez</p>
+          <ul>
+            <li data-i="fl1">Maç zamanlayıcısı ve ilave süre</li>
+            <li data-i="fl2">Titreşim uyarıları</li>
+            <li data-i="fl3">Maç kuralı şablonları</li>
+            <li data-i="fl4">Penaltı atışları</li>
+            <li data-i="fl5">Skor (gol sayısı)</li>
+          </ul>
+        </div>
+        <div class="plan pro">
+          <h3>PRO</h3>
+          <p class="price" data-i="proP">Aylık veya yıllık · 7 gün ücretsiz deneme</p>
+          <ul>
+            <li data-i="pl1">Tüm ücretsiz özellikler</li>
+            <li data-i="pl0">Ekrana bakmadan düğme, crown ve çerçeveyle kontrol</li>
+            <li data-i="pl2">Kart, değişiklik ve forma numarasına kadar ayrıntılı kayıt</li>
+            <li data-i="pl3">Antrenman verileri: kalp atış hızı, mesafe ve ısı haritası</li>
+            <li data-i="pl4">Uydu fotoğrafında saha ısı haritası ve tekrar videosu</li>
+            <li data-i="pl5">Maç raporları ve paylaşım</li>
+            <li data-i="pl6">Geçmiş maçları saklama ve görüntüleme</li>
+          </ul>
+        </div>
+      </div>
+      <p class="note" data-i="plNote">Telefon uygulamasından abone olabilir, App Store veya Google Play hesap ayarlarından istediğiniz zaman iptal edebilirsiniz.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <h2 class="section-title" data-i="s3t">Kayıtlarınız yalnızca cihazlarınızda</h2>
+      <p class="section-sub">
+        <span data-i="s3s">Hesap yok, sunucu yok. Maç kayıtları ve sağlık verileri yalnızca saatiniz ile telefonunuz arasında gidip gelir.</span><br />
+        <a href="../privacy-tr.html" data-doc="privacy" data-i="s3link">Gizlilik Politikası’nı okuyun</a>
+      </p>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-links">
+      <a href="../privacy-tr.html" data-doc="privacy" data-i="fPriv">Gizlilik Politikası</a>
+      <a href="../terms-tr.html" data-doc="terms" data-i="fTerms">Kullanım Koşulları</a>
+      <a href="../support-tr.html" data-doc="support" data-i="fSupp">Destek</a>
+    </div>
+    <select class="lang" id="lang" aria-label="Language">
+      <option value="en">🌐 English</option>
+      <option value="ko">🌐 한국어</option>
+      <option value="pt-BR">🌐 Português</option>
+      <option value="es">🌐 Español</option>
+      <option value="ja">🌐 日本語</option>
+      <option value="zh-Hans">🌐 简体中文</option>
+      <option value="th">🌐 ไทย</option>
+      <option value="vi">🌐 Tiếng Việt</option>
+      <option value="id">🌐 Bahasa Indonesia</option>
+      <option value="de">🌐 Deutsch</option>
+      <option value="fr">🌐 Français</option>
+      <option value="it">🌐 Italiano</option>
+      <option value="nl">🌐 Nederlands</option>
+      <option value="pl">🌐 Polski</option>
+      <option value="tr" selected>🌐 Türkçe</option>
+    </select>
+    <p>kkt6394@gmail.com</p>
+    <p>© 2026 Aiden · Whistle PRO</p>
+  </footer>
+  <script src="../nav.js"></script>
+</body>
+</html>
