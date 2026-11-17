@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#000000">
+<title>Whistle PRO — Member code</title>
+<link rel="icon" href="../../icon.png">
+<style>
+  :root { --lime: #C6FF3D; --charcoal: #1C1C1E; --graphite: #2C2C2E; --grey: #8E8E93; }
+  * { box-sizing: border-box; }
+  html { background: #000; }
+  body { word-break: keep-all; overflow-wrap: break-word; font-family: -apple-system, "Segoe UI", Roboto, "Noto Sans KR", sans-serif; margin: 0 auto; padding: 48px 20px 40px;
+         max-width: 480px; color: #fff; background: #000; line-height: 1.5; text-align: center; }
+  .icon { width: 88px; height: 88px; border-radius: 20px; }
+  h1 { font-size: 1.6rem; margin: 16px 0 14px; }
+  .code { display: inline-block; font-family: ui-monospace, Menlo, Consolas, monospace; font-size: 1.9rem; font-weight: 700; letter-spacing: .08em;
+          color: var(--lime); background: var(--charcoal); border: 1px solid var(--graphite); border-radius: 14px; padding: 10px 22px; margin: 0 0 18px; max-width: 100%; }
+  .lead { margin: 0 0 26px; font-size: 1.02rem; }
+  .stores { display: flex; flex-direction: column; gap: 12px; }
+  .btn { display: flex; align-items: center; justify-content: center; padding: 16px 20px; border-radius: 14px;
+         background: var(--lime); color: #000; text-decoration: none; font-weight: 700; font-size: 1.05rem; }
+  .note { color: var(--grey); font-size: .9rem; margin: 20px 0 0; }
+  .links { margin-top: 24px; font-size: .85rem; }
+  .links a { color: var(--grey); }
+  [hidden] { display: none !important; }
+</style>
+</head>
+<body>
+<img class="icon" src="../../icon.png" alt="Whistle PRO icon">
+<h1 id="title">Member code</h1>
+
+<div id="ok" hidden>
+  <div class="code" id="code"></div>
+  <p class="lead" id="lead"></p>
+  <div class="stores">
+    <a class="btn" id="ios" href="#"></a>
+    <a class="btn" id="android" href="#"></a>
+  </div>
+  <p class="note" id="note"></p>
+</div>
+
+<p class="lead" id="bad" hidden></p>
+
+<div class="links"><a id="home" href="https://kkt6394.github.io/whistle-pro/">Whistle PRO</a></div>
+
+<script>
+(function () {
+  var T = {
+    en: { title: "Member code", lead: "Your association's member discount: 30% off the first year of Whistle PRO (yearly plan).",
+          ios: "Redeem in the App Store", android: "Get it on Google Play",
+          note: "On Android, open the app after installing — the discount appears on the subscription screen.", bad: "This code is not valid." },
+    ja: { title: "会員コード", lead: "ご所属団体の会員割引：Whistle PRO（年間プラン）の初年度が30%オフ。",
+          ios: "App Storeでコードを引き換える", android: "Google Playで手に入れよう",
+          note: "Androidでは、インストール後にアプリを開くと、サブスクリプション画面に割引が表示されます。", bad: "このコードは無効です。" },
+    nl: { title: "Ledencode", lead: "De ledenkorting van je vereniging: 30% korting op het eerste jaar van Whistle PRO (jaarabonnement).",
+          ios: "Inwisselen in de App Store", android: "Download via Google Play",
+          note: "Op Android open je de app na het installeren — de korting verschijnt op het abonnementsscherm.", bad: "Deze code is ongeldig." },
+    de: { title: "Mitgliedscode", lead: "Der Mitgliederrabatt deines Verbands: 30 % Rabatt auf das erste Jahr von Whistle PRO (Jahresabo).",
+          ios: "Im App Store einlösen", android: "Jetzt bei Google Play",
+          note: "Unter Android öffnest du nach der Installation die App — der Rabatt erscheint auf dem Abo-Bildschirm.", bad: "Dieser Code ist ungültig." },
+    ko: { title: "회원 코드", lead: "소속 단체 회원 할인: Whistle PRO 첫해 30% 할인(연간 요금제).",
+          ios: "App Store에서 코드 교환", android: "Google Play에서 받기",
+          note: "안드로이드에서는 앱을 설치하고 열면 구독 화면에 할인이 보입니다.", bad: "올바르지 않은 코드입니다." },
+    pt: { title: "Código de membro", lead: "Desconto para membros da sua associação: 30% de desconto no primeiro ano do Whistle PRO (plano anual).",
+          ios: "Resgatar na App Store", android: "Disponível no Google Play",
+          note: "No Android, abra o app depois de instalar — o desconto aparece na tela de assinatura.", bad: "Este código não é válido." },
+    es: { title: "Código de socio", lead: "Descuento para socios de tu asociación: 30 % de descuento el primer año de Whistle PRO (plan anual).",
+          ios: "Canjear en el App Store", android: "Disponible en Google Play",
+          note: "En Android, abre la app después de instalarla: el descuento aparece en la pantalla de suscripción.", bad: "Este código no es válido." },
+    fr: { title: "Code membre", lead: "Remise membre de votre association : 30 % de réduction sur la première année de Whistle PRO (abonnement annuel).",
+          ios: "Échanger dans l’App Store", android: "Disponible sur Google Play",
+          note: "Sur Android, ouvrez l’app après l’installation : la remise s’affiche sur l’écran d’abonnement.", bad: "Ce code n’est pas valide." },
+    it: { title: "Codice socio", lead: "Sconto soci della tua associazione: 30% di sconto sul primo anno di Whistle PRO (piano annuale).",
+          ios: "Riscatta nell’App Store", android: "Disponibile su Google Play",
+          note: "Su Android, apri l’app dopo l’installazione: lo sconto compare nella schermata dell’abbonamento.", bad: "Questo codice non è valido." },
+    pl: { title: "Kod członkowski", lead: "Zniżka dla członków Twojego związku: 30% taniej za pierwszy rok Whistle PRO (plan roczny).",
+          ios: "Zrealizuj w App Store", android: "Pobierz z Google Play",
+          note: "Na Androidzie po instalacji otwórz aplikację — zniżka pojawi się na ekranie subskrypcji.", bad: "Ten kod jest nieprawidłowy." },
+    tr: { title: "Üye kodu", lead: "Derneğinizin üye indirimi: Whistle PRO'nun ilk yılı %30 indirimli (yıllık plan).",
+          ios: "App Store'da kullan", android: "Google Play'den edinin",
+          note: "Android'de uygulamayı yükledikten sonra açın; indirim abonelik ekranında görünür.", bad: "Bu kod geçerli değil." },
+    zh: { title: "会员代码", lead: "所属协会会员优惠：Whistle PRO 年度方案首年 7 折（立减 30%）。",
+          ios: "在 App Store 兑换", android: "在 Google Play 下载",
+          note: "安装后在Android设备上打开应用，订阅页面就会显示折扣。", bad: "此代码无效。" },
+    th: { title: "รหัสสมาชิก", lead: "ส่วนลดสมาชิกจากสมาคมของคุณ: ลด 30% ในปีแรกของ Whistle PRO (แพ็กเกจรายปี)",
+          ios: "แลกรหัสใน App Store", android: "ดาวน์โหลดจาก Google Play",
+          note: "บน Android ให้เปิดแอปหลังติดตั้ง ส่วนลดจะแสดงในหน้าการสมัครสมาชิก", bad: "รหัสนี้ใช้ไม่ได้" },
+    vi: { title: "Mã hội viên", lead: "Ưu đãi hội viên từ hiệp hội của bạn: giảm 30% năm đầu tiên của Whistle PRO (gói năm).",
+          ios: "Đổi mã trên App Store", android: "Tải trên Google Play",
+          note: "Trên Android, hãy mở ứng dụng sau khi cài đặt — ưu đãi sẽ hiện ở màn hình gói đăng ký.", bad: "Mã này không hợp lệ." },
+    id: { title: "Kode anggota", lead: "Diskon anggota dari asosiasi Anda: potongan 30% untuk tahun pertama Whistle PRO (paket tahunan).",
+          ios: "Tukarkan di App Store", android: "Dapatkan di Google Play",
+          note: "Di Android, buka aplikasi setelah menginstal — diskon akan muncul di layar langganan.", bad: "Kode ini tidak valid." }
+  };
+  var q = new URLSearchParams(location.search);
+  var l = (q.get("lang") || navigator.language || "en").slice(0, 2).toLowerCase();
+  var t = T[l] || T.en;
+  document.documentElement.lang = T[l] ? l : "en";
+  document.title = "Whistle PRO — " + t.title;
+  document.getElementById("title").textContent = t.title;
+
+  var raw = (q.get("c") || "").trim();
+  var code = /^[A-Za-z0-9]{3,20}$/.test(raw) ? raw.toUpperCase() : null;
+  if (!code) {
+    var bad = document.getElementById("bad");
+    bad.textContent = t.bad;
+    bad.hidden = false;
+    return;
+  }
+  var c = encodeURIComponent(code);
+  document.getElementById("code").textContent = code;
+  document.getElementById("lead").textContent = t.lead;
+  var ios = document.getElementById("ios");
+  ios.textContent = t.ios;
+  ios.href = "https://apps.apple.com/redeem?ctx=offercodes&id=6823503970&code=" + c;
+  var an = document.getElementById("android");
+  an.textContent = t.android;
+  an.href = "https://play.google.com/store/apps/details?id=com.aidenstudio.whistlepro&referrer=" + encodeURIComponent("code=" + code);
+  document.getElementById("note").textContent = t.note;
+  document.getElementById("ok").hidden = false;
+})();
+</script>
+</body>
+</html>

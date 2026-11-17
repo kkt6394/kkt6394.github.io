@@ -1,0 +1,10 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.aidenstudio.whistlepro",
+      "sha256_cert_fingerprints": ["95:66:A1:8D:25:CC:0C:52:07:1C:26:0F:A8:3C:CA:F9:28:DF:8C:D7:DE:FA:CE:4D:30:52:76:25:8C:9A:DE:E4"]
+    }
+  }
+]
